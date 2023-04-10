@@ -10,6 +10,6 @@
 ### I run my code using this command on terminal : python madlib_cli/madlib.py where madlib_cli is a directory and madlib.py is where I wrote the code
 
 ### Tests :
-I created a test.txt file and append to it all values user entered then read by using  read_template function then parse them to stripped and parts values where the stripped has the text without the user values and parts has just the user values by using parse_template function then mergethe them again by using merge function
+I created a test.txt file and append to it all values user entered then read by using  read_template function then parse them to stripped and parts values where the stripped has the text without the user values and parts has just the user values by using parse_template function then merge them again by using merge function
 
 [Pull Request Link](https://github.com/DohaKhamaiseh/madlib-cli)

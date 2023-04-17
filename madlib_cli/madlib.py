@@ -5,8 +5,9 @@ def read_template(path):
            try : 
             with open(path, 'r') as reader:
               return reader.read() 
-           except FileNotFoundError as error :
-               print("Sorry, your file not found")
+           except FileNotFoundError:
+             print("Sorry, your file not found")
+             raise
 
 def parse_template(s):
     """Parse a template string and return a tuple of stripped template string and parts."""
@@ -30,17 +31,17 @@ def merge(stripped,parts):
 if __name__ == "__main__":
  print("Welcome ^_^")
  print("We will ask you to provide us with some adjectives, Nouns, and others, then we will fill them in with Funny text, and you will be surprised!")
-value = parse_template(read_template("assets/make_me_a_video_game_template.txt")) 
-# print(value[0])
-# print(value[1])
-p = []
-for i in range(len(value[1])):
+ value = parse_template(read_template("assets/make_me_a_video_game_template.txt")) 
+ # print(value[0])
+ # print(value[1])
+ p = []
+ for i in range(len(value[1])):
      t = input(f"{value[1][i]}")
      p.append(t)
 
-g = tuple(p)
-with open("assets/copy.txt",'w') as writer: 
+ g = tuple(p)
+ with open("assets/copy.txt",'w') as writer: 
              writer.write(merge(value[0],g))
-with open("assets/copy.txt", 'r') as reader:
+ with open("assets/copy.txt", 'r') as reader:
               print(reader.read())
  
